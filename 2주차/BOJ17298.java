@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.Stack;
 
-public class BOJ_17298 {
+public class BOJ17298 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
