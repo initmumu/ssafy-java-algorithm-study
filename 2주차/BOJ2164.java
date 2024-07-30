@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Boj_2164 {
+public class BOJ2164 {
 
 	public static void main(String[] args) throws IOException {
 		
