@@ -19,7 +19,6 @@ public class BOJ10773 {
 			}
 			stack.add(n);
 			sum += n;
-			
 		}
 		System.out.println(sum);
 	}
