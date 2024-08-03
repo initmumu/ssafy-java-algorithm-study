@@ -1,5 +1,3 @@
-import 
-
 graph = dict()
  
 graph['A'] = ['B', 'C']
@@ -41,3 +39,6 @@ def dfs_recursion(graph, start, visited=[]):
 
 print(dfs_list(graph, "A"))
 print(dfs_recursion(graph, "A"))
+
+def readGraph(g):
+    
