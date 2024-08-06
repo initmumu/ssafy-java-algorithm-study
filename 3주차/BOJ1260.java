@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class BOJ1260 {
     public static int[][] graph;
     public static boolean[] check;
     public static Queue<Integer> queue = new LinkedList<>();
