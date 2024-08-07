@@ -40,4 +40,5 @@ def dfs_recursion(graph, start, visited=[]):
 print(dfs_list(graph, "A"))
 print(dfs_recursion(graph, "A"))
 
-print(-3%5)
+def readGraph(g):
+    
