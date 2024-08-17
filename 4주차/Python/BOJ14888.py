@@ -26,7 +26,7 @@ def dfs(n, temp) :
         dfs(n+1, temp - lst[n+1])
         operators[1] += 1
     
-    if operators[2] != 0 : # 곱ㅅㅔㅁ
+    if operators[2] != 0 : # 곱셈
         operators[2] -= 1
         dfs(n+1, temp * lst[n+1])
         operators[2] += 1
