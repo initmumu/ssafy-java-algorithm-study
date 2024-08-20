@@ -47,6 +47,7 @@ public class BOJ17406 {
     }
 
     static void DFS(int depth){
+        // 순열 다 생성 되면, 순서대로 배열 회전시키고 최솟값 찾기
         if (depth == K) {
             int[][] tempArr = new int[N][M];
             for (int i = 0; i < N; i++) {
@@ -62,6 +63,7 @@ public class BOJ17406 {
         }
 
         for (int i = 0; i < K; i++) {
+            // 방문 체크후 DFS
             if (!visited[i]) {
                 visited[i] = true;
                 permutation[depth] = i;
@@ -82,22 +84,22 @@ public class BOJ17406 {
         }
 
         for (int i = s; i > 0; i--) {
-            // 위쪽
+            // 위쪽 돌리기
             for (int row = r-i; row < r+i; row++) {
                 tempArr[c - i][row + 1] = arr[c - i][row];
             }
 
-            // 오른쪽
+            // 오른쪽 돌리기
             for (int col = c-i; col < c+i; col++) {
                 tempArr[col + 1][r + i] = arr[col][r + i];
             }
 
-            // 아래쪽
+            // 아래쪽 돌리기
             for (int row = r+i; row > r-i; row--) {
                 tempArr[c + i][row - 1] = arr[c + i][row];
             }
 
-            // 왼쪽
+            // 왼쪽 돌리기
             for (int col = c+i; col > c-i; col--) {
                 tempArr[col - 1][r - i]= arr[col][r - i];
             }
