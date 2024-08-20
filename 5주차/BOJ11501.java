@@ -18,9 +18,11 @@ public class BOJ11501 {
             for (int i = 0; i < N; i++)
                 prices[i] = Integer.parseInt(st.nextToken());
 
+            // 답은 부호있는 64bit 정수형으로 표현 가능
             long profit = 0;
             int maxPrice = 0;
 
+            // 뒤에서부터 체크
             for (int i = N - 1; i >= 0; i--) {
                 if (prices[i] > maxPrice)
                     maxPrice = prices[i];
