@@ -17,7 +17,9 @@ public class BOJ1931 {
             meeting[i][1] = Integer.parseInt(st.nextToken());
         }
 
+        // 회의 끝나는 시간 기준 오름차순 정렬
         Arrays.sort(meeting, (o1, o2) -> {
+            // 회의가 끝나는 시간이 같다면 시작시간 오름차순 정렬
             if (o1[1] == o2[1])
                 return o1[0] - o2[0];
 
