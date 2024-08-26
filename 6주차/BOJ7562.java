@@ -23,7 +23,8 @@ public class BOJ7562 {
 			x = numArr[1];
 			level = numArr[2];
 			if (y == end_y && x == end_x) {
-				MIN_NUM = Math.min(level, MIN_NUM);
+				System.out.println(level);
+				return;
 			}
 			
 			for (int i = 0; i < 8; i++) {
@@ -56,7 +57,6 @@ public class BOJ7562 {
 			end_x = Integer.parseInt(st.nextToken());
 			MIN_NUM = Integer.MAX_VALUE;
 			bfs(start_y, start_x, 0);
-			System.out.println(MIN_NUM);
 		}
 
 	}
