@@ -1,7 +1,5 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class BOJ2931 {
     public static void main(String[] args) throws IOException {
@@ -119,31 +117,32 @@ public class BOJ2931 {
                     }
                 }
             }
+            if (up == 1 && down == 1 && left == 1 && right == 1) {
+                break;
+            }
         }
 
         char result = ' ';
         if (up == 1 && down == 1 && left == 0 && right == 0) {
-            result = '|';
+            System.out.println(x + " " + y + " " + "|");
         }
         else if (up == 0 && down == 0 && left == 1 && right == 1) {
-            result = '-';
+            System.out.println(x + " " + y + " " + "-");
         }
         else if (up == 1 && down == 1 && left == 1 && right == 1) {
-            result = '+';
+            System.out.println(x + " " + y + " " + "+");
         }
         else if (up == 0 && down == 1 && left == 0 && right == 1) {
-            result = '1';
+            System.out.println(x + " " + y + " " + "1");
         }
         else if (up == 1 && down == 0 && left == 0 && right == 1) {
-            result = '2';
+            System.out.println(x + " " + y + " " + "2");
         }
         else if (up == 1 && down == 0 && left == 1 && right == 0) {
-            result = '3';
+            System.out.println(x + " " + y + " " + "3");
         }
         else if (up == 0 && down == 1 && left == 1 && right ==0) {
-            result = '4';
+            System.out.println(x + " " + y + " " + "4");
         }
-
-        System.out.println(x + " " + y + " " + result);
     }
 }
