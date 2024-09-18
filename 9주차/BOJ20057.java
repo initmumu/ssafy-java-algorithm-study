@@ -12,7 +12,7 @@ public class BOJ20057 {
                     0, 0, 2, 0, 0,
                     0, 10, 7, 1, 0,
                     5, 0, 0, 0, 0,
-                    0,      10, 7, 1, 0,
+                    0, 10, 7, 1, 0,
                     0, 0, 2, 0, 0
             },
 
@@ -26,9 +26,9 @@ public class BOJ20057 {
 
             {   // 우
                     0, 0, 2, 0, 0,
-                    0, 0, 10, 7, 0,
+                    0, 1, 7, 10, 0,
                     0, 0, 0, 0, 5,
-                    0, 0, 10, 7, 0,
+                    0, 1, 7, 10, 0,
                     0, 0, 2, 0, 0
             },
 
@@ -55,10 +55,10 @@ public class BOJ20057 {
             }
         }
 
-        System.out.println(move());
+        System.out.println(tornado());
     }
 
-    static int move() {
+    static int tornado() {
         int x = N / 2;
         int y = N / 2;
 
@@ -74,14 +74,6 @@ public class BOJ20057 {
 
                     // 모래 흩날리기
                     outSand += spreadSand(x, y, direction);
-
-                    for (int i = 0; i < N; i++) {
-                        for (int j = 0; j < N; j++){
-                            System.out.print(map[i][j] + " ");
-                        }
-                        System.out.println();
-                    }
-                    System.out.println();
 
                     if (x == 0 && y == 0) {
                         return outSand;
