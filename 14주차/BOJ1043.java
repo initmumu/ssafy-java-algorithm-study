@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class BOJ_1043 {
+public class BOJ1043 {
 
     static int[] parent;
     static ArrayList<Integer>[] party;
