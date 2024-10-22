@@ -1,49 +1,50 @@
-import java.io.*;
-import java.util.*;
+    import java.io.*;
+    import java.util.*;
 
-public class BOJ15666 {
+    public class BOJ15666 {
 
-    static int N, M;
-    static int[] seq, arr;
-    static StringBuilder sb = new StringBuilder();
+        static int N, M;
+        static int[] arr;
+        static List<Integer> seq;
+        static StringBuilder sb = new StringBuilder();
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        public static void main(String[] args) throws IOException {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            StringTokenizer st = new StringTokenizer(br.readLine());
 
-        N = Integer.parseInt(st.nextToken());
-        M = Integer.parseInt(st.nextToken());
+            N = Integer.parseInt(st.nextToken());
+            M = Integer.parseInt(st.nextToken());
 
-        seq = new int[N];
-        arr = new int[M];
 
-        st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < N; i++) {
-            seq[i] = Integer.parseInt(st.nextToken());
-        }
+            arr = new int[M];
 
-        Arrays.sort(seq);
-
-        DFS(0, 0);
-        System.out.println(sb);
-    }
-
-    static void DFS(int start, int depth) {
-        if (depth == M) {
-            for (int a: arr) {
-                sb.append(a).append(" ");
-            }
-            sb.append("\n");
-            return;
-        }
-
-        for (int i = start; i < N; i++) {
-            if (i > start && seq[i] == seq[i - 1]) {
-                continue;
+            Set<Integer> set = new HashSet<>();
+            st = new StringTokenizer(br.readLine());
+            for (int i = 0; i < N; i++) {
+                set.add(Integer.parseInt(st.nextToken()));
             }
 
-            arr[depth] = seq[i];
-            DFS(i, depth + 1);
+            seq = new ArrayList<>(set);
+            N = seq.size();
+
+            Collections.sort(seq);
+
+            DFS(0, 0);
+            System.out.println(sb);
+        }
+
+        static void DFS(int start, int depth) {
+            if (depth == M) {
+                for (int a: arr) {
+                    sb.append(a).append(" ");
+                }
+                sb.append("\n");
+                return;
+            }
+
+            for (int i = start; i < N; i++) {
+                arr[depth] = seq.get(i);
+                DFS(i, depth + 1);
+            }
         }
     }
-}
