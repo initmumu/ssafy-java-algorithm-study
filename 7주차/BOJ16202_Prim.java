@@ -5,22 +5,24 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-class Node implements Comparable<Node> {
-    int to;
-    int weight;
-
-    public Node(int to, int weight) {
-        this.to = to;
-        this.weight = weight;
-    }
-
-    @Override
-    public int compareTo(Node o) {
-        return Integer.compare(this.weight, o.weight);
-    }
-}
 
 public class BOJ16202_Prim {
+
+    public static class Node implements Comparable<Node> {
+
+        int to;
+        int weight;
+
+        public Node(int to, int weight) {
+            this.to = to;
+            this.weight = weight;
+        }
+
+        @Override
+        public int compareTo(Node o) {
+            return Integer.compare(this.weight, o.weight);
+        }
+    }
 
     public static int N, M, K;
     public static ArrayList<ArrayList<Node>> graph;
@@ -39,7 +41,9 @@ public class BOJ16202_Prim {
             int to = node.to;
             int weight = node.weight;
 
-            if (visited[to]) continue;
+            if (visited[to]) {
+                continue;
+            }
             visited[to] = true;
             cost += weight;
             count++;
@@ -82,7 +86,7 @@ public class BOJ16202_Prim {
         }
 
         for (int i = 0; i < K; i++) {
-            if (prim(i+1)) {
+            if (prim(i + 1)) {
                 continue;
             } else {
                 for (int j = i; j < K; j++) {
