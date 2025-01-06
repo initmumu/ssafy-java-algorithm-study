@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BOJ1245 {
 
     static int N, M;
     static int[][] farm;
