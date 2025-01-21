@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="1주차"/>
 	<classpathentry kind="src" path="2주차"/>
 	<classpathentry kind="src" path="3주차/Java"/>
 	<classpathentry kind="src" path="5주차/Java"/>
 	<classpathentry kind="src" path="6주차/java"/>
 	<classpathentry kind="src" path="9주차"/>
+	<classpathentry kind="src" path="23주차"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
