@@ -29,7 +29,7 @@ public class Main {
                 int e = edge.end;
                 int d = edge.distance;
 
-                if (distance[s] != Integer.MAX_VALUE && distance[e] > distance[s] + d) {
+                if (distance[e] > distance[s] + d) {
                     distance[e] = distance[s] + d;
                     if (i == N - 1) {
                         return true;
